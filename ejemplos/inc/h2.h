@@ -1,0 +1,1 @@
+int const var2 = 3;

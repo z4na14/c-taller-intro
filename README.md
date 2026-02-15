@@ -1,6 +1,3 @@
-Material para la charla 'Ampliación de C para normies'. 
-Hay [ejemplos](Ejemplos/) a disposición para ver como se usan ciertas cosas explicadas. 
-
 # Índice
 
 

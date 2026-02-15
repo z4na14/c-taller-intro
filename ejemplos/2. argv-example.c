@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
+
 int main(int argc, char *argv[]) {
     int verbose = 0;
     char *inputFile = NULL;
     char *outputFile = NULL;
 
     for (int i = 1; i < argc; i++) {
+        // strcmp devuelve la diferencia entre ambos literales
         if (strcmp(argv[i], "-v") == 0) {
             verbose = 1;
 

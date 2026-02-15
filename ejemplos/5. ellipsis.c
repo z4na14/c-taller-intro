@@ -3,15 +3,21 @@
 
 
 int sum(int count, ...) {
-    va_list args;
+    va_list args; // Estructura donde las variables se van a ir almacenando
     int total = 0;
 
+    // Como las variables están almacenadas de forma
+    // contigua en memoria, se especifica el último de estos
+    // y se comienza a leer de ahí
     va_start(args, count);
 
     for (int i = 0; i < count; i++) {
+        // De dichos valores en memoria se busca
+        // el siguiente del tipo especificado
         total += va_arg(args, int);
     }
 
+    // Destructor para liberar memoria y demás
     va_end(args);
 
     return total;
