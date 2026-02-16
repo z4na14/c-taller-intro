@@ -2,6 +2,24 @@ CC=gcc
 CFLAGS=-Wall -Werror
 BUILD_DIR=./build
 
+# FLAGS COMUNES:
+# -o                Salida de la compilacion
+#
+# -I./inc_dir       Especificar directorio con headers a ser importados
+# -O0/1/2/3         Opciones de optimizacion (0: Menor, 3: Mayor)
+#
+# -Dvar             Definir variable para las directivas (Define)
+# -Uvar             Eliminar variable para las directivas (Undefine)
+#
+# -Llib_dir         Especificar directorio extra de librerias
+# -lX               Especificar libreria estatica a enlazar
+#                    Dichas librerias tienen formato de libX.a
+#
+# -E                "prEprocessed" -> stdout
+# -S                "Stop" -> stdout
+# -c                "Compile" -> espeficiar salida
+
+
 all: ej1 ej2 ej3 ej4 ej5 ej6
 
 # CC: Compilador (Para C++ la norma es poner CXX, el equivalente de CC)
