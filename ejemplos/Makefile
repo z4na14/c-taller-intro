@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Werror
+CFLAGS=-Wall -Werror -O0
 BUILD_DIR=./build
 
 # FLAGS COMUNES:
@@ -18,6 +18,8 @@ BUILD_DIR=./build
 # -E                "prEprocessed" -> stdout
 # -S                "Stop" -> stdout
 # -c                "Compile" -> espeficiar salida
+#
+# -g                 Activar simbolos de debug para GDB
 
 
 all: ej1 ej2 ej3 ej4 ej5 ej6
@@ -26,7 +28,7 @@ all: ej1 ej2 ej3 ej4 ej5 ej6
 # CFLAGS: Flags de compilacion
 # $<: Primer requisito
 ej1: 1-io-test.c
-	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$@ $<
+	$(CC) $(CFLAGS) -g -o $(BUILD_DIR)/$@ $<
 
 ej2: 2-argv-example.c
 	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$@ $<
